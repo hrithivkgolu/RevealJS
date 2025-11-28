@@ -12,16 +12,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/plugin/highlight/monokai.min.css">
   
   <style>
-    .reveal section h1, .reveal section h2 { color: #00d4aa; }
     .reveal .footer {
       position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 0.5em;
+      bottom: 15px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 0.45em;
       color: #666;
     }
-    .reveal .contact { font-size: 0.6em; color: #aaa; }
+    .reveal .email {
+      color: #00d4aa;
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -34,11 +37,11 @@
       <h1>Q4 2025 Earnings Report</h1>
       <h3>Apex Financial Group</h3>
       <p><small>Presented by Technical Consultant</small></p>
+      <br>
       <p style="font-size: 0.8em; color:#00d4aa;">
         <strong>Email:</strong> 24f2000717@ds.study.iitm.ac.in
       </p>
-      <br><br>
-      <p><small>February 28, 2026</small></p>
+      <p><small>28 February 2026</small></p>
     </section>
 
     <!-- Markdown Slide -->
@@ -56,7 +59,7 @@
       </textarea>
     </section>
 
-    <!-- Animated Fragments Slide -->
+    <!-- Animated Fragments -->
     <section>
       <h2>Key Growth Drivers</h2>
       <ul>
@@ -65,71 +68,46 @@
         <li class="fragment fade-up">Digital Assets division launched</li>
         <li class="fragment fade-up">Cost-to-income ratio improved to 54%</li>
       </ul>
-      <aside class="notes">
-        Emphasize how digital transformation and crypto exposure drove outsized growth.
-        Mention that competitors are 18–24 months behind on digital assets.
-      </aside>
+      <aside class="notes">Highlight digital transformation leadership.</aside>
     </section>
 
-    <!-- Math & Financial Formulas -->
+    <!-- Math Slide -->
     <section>
       <h2>Key Financial Formulas</h2>
-      <div class="fragment fade-in">
-        <p><strong>DuPont ROE Decomposition</strong></p>
-        <p>\[
-        ROE = \underbrace{\frac{Net\ Income}{Revenue}}_{\text{Profit Margin}}
-        \times \underbrace{\frac{Revenue}{Total\ Assets}}_{\text{Asset Turnover}}
-        \times \underbrace{\frac{Total\ Assets}{Equity}}_{\text{Financial Leverage}}
-        \]</p>
+      <div class="fragment">DuPont ROE:<br>
+        $$ ROE = \frac{Net\ Income}{Revenue} \times \frac{Revenue}{Assets} \times \frac{Assets}{Equity} $$
       </div>
-      <div class="fragment fade-in">
-        <p><strong>Black-Scholes (Simplified)</strong></p>
-        <p>\[
-        C = S_0 N(d_1) - K e^{-rT} N(d_2)
-        \]</p>
-      </div>
-      <aside class="notes">
-        Quickly explain that ROE improvement came primarily from higher profit margin due to scale and lower funding costs.
-      </aside>
+      <aside class="notes">ROE improvement driven by margin expansion.</aside>
     </section>
 
-    <!-- Code Sample with Syntax Highlighting -->
+    <!-- Code Slide -->
     <section>
-      <h2>Risk-Adjusted Return Calculation (Python)</h2>
-      <pre><code data-trim data-noescape class="python">
+      <h2>Risk-Adjusted Return (Python)</h2>
+      <pre><code data-trim class="python">
 import numpy as np
-import pandas as pd
-
-# Sample portfolio returns
-returns = pd.Series([0.12, 0.08, 0.15, -0.03, 0.22, 0.18])
-
-# Sharpe Ratio (risk-free rate = 4.2%)
+returns = np.array([0.12, 0.08, 0.15, -0.03, 0.22, 0.18])
 sharpe = (returns.mean() - 0.042) / returns.std() * np.sqrt(12)
-
-# Sortino Ratio (downside deviation only)
-downside = returns[returns < 0]
-sortino = (returns.mean() - 0.042) / downside.std() * np.sqrt(12)
-
-print(f"Sharpe Ratio:  {sharpe:.2f}")
-print(f"Sortino Ratio: {sortino:.2f}")
+print(f"Sharpe Ratio: {sharpe:.2f}")
       </code></pre>
-      <p class="fragment">Output → Sharpe: 1.84 | Sortino: 2.97</p>
-      <aside class="notes">
-        This is the exact script our quant team uses for monthly performance reporting.
-      </aside>
+      <aside class="notes">This is our live quant script.</aside>
     </section>
 
-    <!-- Final Slide -->
+    <!-- Thank You Slide -->
     <section data-background-color="#001510">
       <h2>Thank You</h2>
-      <p>Questions?</p>
-      <br>
-      <p style="font-size:0.7em; color:#00d4aa;">
+      <p>Any questions?</p>
+      <br><br>
+      <p style="font-size: 1.1em; color:#00d4aa;">
         24f2000717@ds.study.iitm.ac.in
       </p>
-      <div class="footer">Apex Financial Group — Q4 2025 Earnings</div>
     </section>
 
+  </div>
+
+  <!-- Persistent Footer with Email on EVERY slide -->
+  <div class="footer">
+    Q4 2025 Earnings | Apex Financial Group | 
+    <span class="email">24f2000717@ds.study.iitm.ac.in</span>
   </div>
 </div>
 
@@ -146,8 +124,6 @@ print(f"Sortino Ratio: {sortino:.2f}")
     progress: true,
     center: true,
     transition: 'convex',
-    backgroundTransition: 'fade',
-    slideNumber: 'c/t',
     plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ]
   });
 </script>
