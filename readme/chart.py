@@ -3,55 +3,44 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-# ------------------------------
-# Data Generation
-# ------------------------------
-
+# --- Synthetic business data generation ---
 np.random.seed(42)
 
 channels = ["Email", "Chat", "Phone", "Social Media"]
-
-# Generate realistic response times (in minutes)
 data = {
-    "Channel": np.repeat(channels, 300),
-    "ResponseTime": np.concatenate([
-        np.random.normal(loc=120, scale=25, size=300),   # Email
-        np.random.normal(loc=10, scale=4, size=300),     # Chat
-        np.random.normal(loc=40, scale=12, size=300),    # Phone
-        np.random.normal(loc=90, scale=20, size=300),    # Social Media
+    "channel": np.repeat(channels, 250),
+    "response_time": np.concatenate([
+        np.random.normal(6, 2, 250),   # Email (slow)
+        np.random.normal(2, 0.7, 250), # Chat (fast)
+        np.random.normal(4, 1.2, 250), # Phone
+        np.random.normal(8, 3, 250),   # Social Media (slowest)
     ])
 }
 
 df = pd.DataFrame(data)
 
-# ------------------------------
-# Styling
-# ------------------------------
-
+# --- Professional Seaborn styling ---
 sns.set_style("whitegrid")
 sns.set_context("talk")
 
-plt.figure(figsize=(8, 8))  # 512x512 output at dpi=64
-
-# ------------------------------
-# Violinplot
-# ------------------------------
+# --- Create EXACT 512x512 PNG ---
+fig = plt.figure(figsize=(512/100, 512/100), dpi=100)
 
 sns.violinplot(
     data=df,
-    x="Channel",
-    y="ResponseTime",
-    palette="coolwarm",
-    linewidth=1.2
+    x="channel",
+    y="response_time",
+    palette="Set2",
+    cut=0
 )
 
-plt.title("Customer Support Response Time Distribution by Channel", fontsize=18)
+plt.title("Response Time Distribution by Support Channel")
 plt.xlabel("Support Channel")
-plt.ylabel("Response Time (minutes)")
+plt.ylabel("Response Time (hours)")
 
-# ------------------------------
-# Export
-# ------------------------------
+# Remove extra padding to preserve exact size
+plt.tight_layout(pad=0)
 
-plt.savefig("chart.png", dpi=64, bbox_inches="tight")
+# Save EXACT 512x512
+plt.savefig("chart.png", dpi=100)
 plt.close()
