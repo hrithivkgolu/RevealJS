@@ -6,6 +6,9 @@ footer: "Apex Software · Product Docs · Page ${{ page }} of ${{ pages }}"
 theme: custom
 ---
 
+<!-- theme: custom -->
+<!-- paginate: true -->
+
 <!--
 Custom Marp theme (embedded)
 -->
@@ -65,7 +68,6 @@ It is written in **Marp**, suitable for:
 ---
 
 <!-- Background image slide -->
-<!-- Replace URL with your own repo's asset path if needed -->
 ![bg](https://images.unsplash.com/photo-1535223289827-42f1e9919769)
 
 # **System Architecture**
@@ -78,25 +80,22 @@ Our platform follows a modular microservice structure enabling:
 ---
 
 # **Algorithmic Complexity**
-We use efficient algorithms in our query engine.
-
-### Example: Time Complexity  
-The complexity of a balanced binary search tree operation:
+### Example: Time Complexity
 
 \[
 T(n)=O(\log n)
 \]
 
-The complexity of a naive search:
+Naive search:
 
 \[
 T(n)=O(n)
 \]
 
-Mathematically, for input size \( n \):
+Improvement ratio:
 
 \[
-\text{Improvement Ratio} = \frac{O(n)}{O(\log n)} = \frac{n}{\log n}
+\frac{n}{\log n}
 \]
 
 ---
@@ -123,10 +122,7 @@ Mathematically, for input size \( n \):
 # **Deployment Flow**
 1. Write documentation in Markdown  
 2. Commit to GitHub  
-3. Use Marp CLI or GitHub Actions to generate:  
-   - PDF  
-   - PPTX  
-   - HTML  
+3. Generate PDF / PPTX / HTML via Marp CLI or GitHub Actions  
 4. Publish to Docs Portal  
 
 ---
@@ -134,5 +130,3 @@ Mathematically, for input size \( n \):
 # **Thank You**
 Questions?  
 📧 **24f2000717@ds.study.iitm.ac.in**
-
----
