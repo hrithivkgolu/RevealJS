@@ -1,10 +1,10 @@
-# Email for verification: 24f2000717@ds.study.iitm.ac.in
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import mpld3
+from io import StringIO
 
-# Sample dataset (you can replace this with reading a CSV file)
+# Sample dataset
 data = """employee_id,department,region,performance_score,years_experience,satisfaction_rating
 EMP001,R&D,Middle East,75.23,2,4.7
 EMP002,R&D,North America,82.72,1,4.8
@@ -18,10 +18,9 @@ EMP009,Finance,Middle East,74.3,6,4.6
 EMP010,HR,Europe,80.2,2,4.3"""
 
 # Load data into a pandas DataFrame
-from io import StringIO
 df = pd.read_csv(StringIO(data))
 
-# Frequency count for the "Marketing" department
+# Frequency count for Marketing
 marketing_count = df[df['department'] == 'Marketing'].shape[0]
 print(f"Frequency count of Marketing department: {marketing_count}")
 
@@ -34,10 +33,15 @@ plt.ylabel('Number of Employees')
 plt.xticks(rotation=45)
 plt.tight_layout()
 
-# Save the plot as an HTML file using mpld3
-import mpld3
+# Convert plot to HTML and embed email for verification
 html_str = mpld3.fig_to_html(plt.gcf())
-with open("department_distribution.html", "w") as f:
-    f.write(html_str)
 
-print("HTML file 'department_distribution.html' generated successfully!")
+# Add email to HTML
+email_html = "<p>Email for verification: 24f2000717@ds.study.iitm.ac.in</p>"
+html_str_with_email = html_str.replace("</body>", email_html + "</body>")
+
+# Save the HTML file
+with open("department_distribution.html", "w") as f:
+    f.write(html_str_with_email)
+
+print("HTML file 'department_distribution.html' generated successfully with email!")
