@@ -1,3 +1,5 @@
+# Email for verification: 24f2000717@ds.study.iitm.ac.in
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -17,10 +19,10 @@ EMP008,IT,Africa,79.1,4,4.1
 EMP009,Finance,Middle East,74.3,6,4.6
 EMP010,HR,Europe,80.2,2,4.3"""
 
-# Load data into a pandas DataFrame
+# Load data into a DataFrame
 df = pd.read_csv(StringIO(data))
 
-# Frequency count for Marketing
+# Frequency count for Marketing department
 marketing_count = df[df['department'] == 'Marketing'].shape[0]
 print(f"Frequency count of Marketing department: {marketing_count}")
 
@@ -33,15 +35,16 @@ plt.ylabel('Number of Employees')
 plt.xticks(rotation=45)
 plt.tight_layout()
 
-# Convert plot to HTML and embed email for verification
+# Convert plot to HTML using mpld3
 html_str = mpld3.fig_to_html(plt.gcf())
 
-# Add email to HTML
+# Embed email for verification inside the HTML
 email_html = "<p>Email for verification: 24f2000717@ds.study.iitm.ac.in</p>"
 html_str_with_email = html_str.replace("</body>", email_html + "</body>")
 
 # Save the HTML file
-with open("department_distribution.html", "w") as f:
+html_file = "department_distribution.html"
+with open(html_file, "w") as f:
     f.write(html_str_with_email)
 
-print("HTML file 'department_distribution.html' generated successfully with email!")
+print(f"HTML file '{html_file}' generated successfully with email embedded!")
