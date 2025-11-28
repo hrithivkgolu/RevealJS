@@ -6,5 +6,5 @@ The data represents customer movement between touchpoints—from awareness to pu
 across multiple acquisition channels.
 
 Files:
-- chart.png — RAWGraphs Alluvial Diagram (300–512 px)
+- chart.png — RAWGraphs Alluvial Diagram 
 - README.md — Email + project description
