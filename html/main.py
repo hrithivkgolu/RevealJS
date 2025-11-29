@@ -45,6 +45,6 @@ html_str_with_email = html_str.replace("</body>", email_html + "</body>")
 # Save the HTML file
 html_file = "department_distribution.html"
 with open(html_file, "w") as f:
-    f.write(html_str_with_email)
+    f.write(html_str)
 
 print(f"HTML file '{html_file}' generated successfully with email embedded!")
