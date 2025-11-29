@@ -1,48 +1,45 @@
 ---
 marp: true
-title: Product Documentation Overview
+theme: custom
 paginate: true
 footer: "Apex Software · Product Docs · Page ${{ page }} of ${{ pages }}"
-theme: custom
+title: Product Documentation Overview
+description: "Technical documentation presentation for Apex Software"
 ---
 
-<!-- theme: custom -->
-<!-- paginate: true -->
+<!-- class: custom -->
 
 <!--
-Custom Marp theme (embedded)
+Embedded Custom Marp Theme
+Use with: marp --theme custom.css <file>.md
 -->
 
-<style>
-section {
-  font-family: 'Inter', sans-serif;
-}
-
-h1, h2 {
-  color: #00d4aa;
-}
-
-custom-theme {
-  background-color: #0f1620;
-  color: white;
-}
-</style>
-
-<!-- Define the custom theme -->
 <style>
 :root {
   --color-background: #0f1620;
   --color-foreground: #ffffff;
   --color-accent: #00d4aa;
+  --color-accent-light: rgba(0, 212, 170, 0.1);
 }
 
-section.custom {
+section {
   background: var(--color-background);
   color: var(--color-foreground);
+  font-family: 'Inter', sans-serif;
 }
 
-section.custom h1 {
+h1, h2 {
   color: var(--color-accent);
+}
+
+/* Custom styled box */
+.custom-box {
+  padding: 20px;
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  color: var(--color-accent);
+  font-size: 1.2em;
+  background: var(--color-accent-light);
 }
 </style>
 
@@ -60,10 +57,10 @@ section.custom h1 {
 This presentation documents the technical and product-level functionality of our software platform.  
 It is written in **Marp**, suitable for:
 
-- Version control (GitHub / GitLab)
-- Automatic PDF conversion
-- CI documentation pipelines
-- Developer-friendly collaboration
+- Version control (GitHub / GitLab)  
+- Automatic PDF conversion  
+- CI documentation pipelines  
+- Developer-friendly collaboration  
 
 ---
 
@@ -102,17 +99,6 @@ Improvement ratio:
 
 # **Custom Styling Example**
 
-<style>
-.custom-box {
-  padding: 20px;
-  border: 2px solid #00d4aa;
-  border-radius: 12px;
-  color: #00d4aa;
-  font-size: 1.2em;
-  background: rgba(0,212,170,0.1);
-}
-</style>
-
 <div class="custom-box">
   This container is styled using custom CSS inside the Marp document.
 </div>
@@ -130,3 +116,4 @@ Improvement ratio:
 # **Thank You**
 Questions?  
 📧 **24f2000717@ds.study.iitm.ac.in**
+
