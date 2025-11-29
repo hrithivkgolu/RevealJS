@@ -1,52 +1,27 @@
 ---
 marp: true
-title: "Product Documentation Overview"
-description: "Technical documentation presentation for Apex Software"
-theme: custom
+title: Data Design by Dialogue
+author: Anand S
+theme: gaia
 paginate: true
-footer: "Apex Software · Product Docs · Page ${{ page }} of ${{ pages }}"
-author: "Technical Writer — 24f2000717@ds.study.iitm.ac.in"
-date: 2025-11-29
-size: 16:9
-math: true
 ---
-
-<!-- class: custom -->
-<!--
-Embedded Custom Marp Theme
-Use with: marp --theme custom.css <file>.md
--->
 
 <style>
-:root {
-  --color-background: #0f1620;
-  --color-foreground: #ffffff;
-  --color-accent: #00d4aa;
-  --color-accent-light: rgba(0, 212, 170, 0.1);
-}
-
-section {
-  background: var(--color-background);
-  color: var(--color-foreground);
-  font-family: 'Inter', sans-serif;
-}
-
-h1, h2 {
-  color: var(--color-accent);
-}
-
-/* Custom styled box */
-.custom-box {
-  padding: 20px;
-  border: 2px solid var(--color-accent);
-  border-radius: 12px;
-  color: var(--color-accent);
-  font-size: 1.2em;
-  background: var(--color-accent-light);
-}
+  blockquote {
+    font-style: italic;
+  }
+  section {
+    background-image: url('qr-code.png');
+    background-repeat: no-repeat;
+    background-position: top 20px right 20px;
+    background-size: 80px auto;
+  }
 </style>
 
----
+# Data Design by Dialogue
+
+Content with styled quotes and background image...
+
 
 # **Product Documentation Presentation**
 ## Apex Software
