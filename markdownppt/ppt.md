@@ -1,14 +1,17 @@
 ---
 marp: true
+title: "Product Documentation Overview"
+description: "Technical documentation presentation for Apex Software"
 theme: custom
 paginate: true
 footer: "Apex Software · Product Docs · Page ${{ page }} of ${{ pages }}"
-title: Product Documentation Overview
-description: "Technical documentation presentation for Apex Software"
+author: "Technical Writer — 24f2000717@ds.study.iitm.ac.in"
+date: 2025-11-29
+size: 16:9
+math: true
 ---
 
 <!-- class: custom -->
-
 <!--
 Embedded Custom Marp Theme
 Use with: marp --theme custom.css <file>.md
