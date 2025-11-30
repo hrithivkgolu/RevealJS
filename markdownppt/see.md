@@ -23,3 +23,5 @@ paginate: true
 Content with styled quotes and background image...
 
 24f2000717@ds.study.iitm.ac.in
+
+**Email:** <span class="email">24f2000717@ds.study.iitm.ac.in</span>  
