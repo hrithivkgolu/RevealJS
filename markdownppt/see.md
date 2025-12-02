@@ -42,11 +42,13 @@ If you have questions, please email:
 
 <!-- slide with background image -->
 <!--
-backgroundImage: url('https://images.unsplash.com/photo-1542224566-0df5653b4d6f?q=80&w=1400&auto=format&fit=crop')
+# Use a relative path or filename; Marp accepts url('...') for backgroundImage.
+backgroundImage: url('45FA21E0-CE2C-42C4-8446-FB127D3B061D_1_105_c.jpeg')
 backgroundSize: cover
 backgroundOpacity: 0.25
 class: hero
 -->
+
 
 # Market Snapshot  
 > Q4 visual context
@@ -105,6 +107,9 @@ By the Master Theorem:
 $$
 T(n) = \Theta(n\log n)
 $$
+
+---
+## Algorithmic / Quant Math Example
 
 Example: Sharpe computation (annualized):
 ```python
