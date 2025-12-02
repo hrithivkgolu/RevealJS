@@ -11,49 +11,38 @@ paginate: true
     font-style: italic;
   }
   section {
-    background-image: url('qr-code.png');
-    background-repeat: no-repeat;
-    background-position: top 20px right 20px;
-    background-size: 80px auto;
+  background-image: url('45FA21E0-CE2C-42C4-8446-FB127D3B061D_1_105_c.jpeg');
+  background-repeat: no-repeat;
+  background-position: top 20px right 20px;
+  background-size: 80px auto;
   }
 </style>
 
-<!--
-NOTE:
-- The `footer:` directive above places the email on every slide (Marp will show it in the slide foot area).
-- `paginate: true` shows page numbers. Styling above adjusts their appearance.
--->
-
 # Q4 2025 Earnings Report  
 ### Apex Financial Group  
-<span class="small-muted">Presented by Technical Consultant</span>
-
-**Email:** <span class="email">24f2000717@ds.study.iitm.ac.in</span>  
+**Email:** 24f2000717@ds.study.iitm.ac.in  
 **Date:** 28 February 2026
 
 ---
 
 ## Contact
-
-If you have questions, please email:  
-**<span class="email">24f2000717@ds.study.iitm.ac.in</span>**
+If you have questions:  
+**24f2000717@ds.study.iitm.ac.in**
 
 ---
 
-<!-- slide with background image -->
-<!--
-# Use a relative path or filename; Marp accepts url('...') for backgroundImage.
-backgroundImage: url('45FA21E0-CE2C-42C4-8446-FB127D3B061D_1_105_c.jpeg')
-backgroundSize: cover
-backgroundOpacity: 0.25
-class: hero
--->
-
+<!-- background image slide -->
+<!-- The following line activates background image for *this* slide -->
+<!-- Marp directive syntax: -->
+<!-- backgroundImage: url('45FA21E0-CE2C-42C4-8446-FB127D3B061D_1_105_c.jpeg') -->
+<!-- backgroundSize: cover -->
+<!-- backgroundOpacity: 0.25 -->
+<!-- class: hero -->
 
 # Market Snapshot  
 > Q4 visual context
 
-This slide uses a full-bleed background image set through Marp slide-level directives.
+This slide uses a full-bleed background image.
 
 ---
 
