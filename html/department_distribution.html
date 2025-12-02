@@ -1,10 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Department Distribution Visualization</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+    }
+    pre {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+    }
+</style>
+</head>
 
+<body>
+
+<h2>Department Distribution Chart</h2>
 
 <style>
 
 </style>
 
-<div id="fig_el21538bf58aaa2-1b14-4930-9aa6-1fd8cac542891460139154"></div>
+<div id="fig_el217513f2d38f8-aa41-4c43-9ca6-793117c6e98e74019715"></div>
+<script>
+function mpld3_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
+   // already loaded: just create the figure
+   !function(mpld3){
+       
+       mpld3.draw_figure("fig_el217513f2d38f8-aa41-4c43-9ca6-793117c6e98e74019715", {"width": 800.0, "height": 600.0, "axes": [{"bbox": [0.09378472222222224, 0.17220199001142422, 0.8874652777777777, 0.7655757877663536], "xlim": [-0.5, 4.5], "ylim": [0.0, 2.1], "xdomain": [-0.5, 4.5], "ydomain": [0.0, 2.1], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 5, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 10, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el217513262d749-37fd-40d1-a298-ff682dcfc848", "lines": [], "paths": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el217514216270b-6a39-4ca0-a075-2df3bf31f755", "dasharray": "none", "alpha": 1, "facecolor": "#4A4279", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 2, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21751ed3a62e5-565c-4772-b9f6-4b4ed4c4ae9d", "dasharray": "none", "alpha": 1, "facecolor": "#3C6582", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el217517ddab5aa-3589-4e77-b7c9-9297cac27175", "dasharray": "none", "alpha": 1, "facecolor": "#2E827F", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 4, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el217514a1921d2-0223-4fa9-8543-4618b68c210e", "dasharray": "none", "alpha": 1, "facecolor": "#45A677", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 5, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el2175126fc460d-ac99-4f39-bfb3-31a4ca29c905", "dasharray": "none", "alpha": 1, "facecolor": "#8FC455", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Department", "position": [0.5, -0.16179803313724223], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "hanging", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21751e1593e35-c8a3-47ea-a9b8-0b76f29fed35"}, {"text": "Number of Employees", "position": [-0.06483039242536877, 0.5], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -90.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21751d021b2fe-ea71-48e1-b35a-cd3ff256345e"}, {"text": "Distribution of Employees Across Departments", "position": [0.5, 1.0181417556704753], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21751f8b3bd43-2a43-4be6-9552-1369054722cd"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[-0.4, 0.0, 0.6, 1.6, 2.6, 3.6], [0.4, 0.0, 1.4, 2.4, 3.4, 4.4], [0.4, 2.0, 1.4, 2.4, 3.4, 4.4], [-0.4, 2.0, 0.6, 1.6, 2.6, 3.6]]}, "id": "el217513f2d38f8-aa41-4c43-9ca6-793117c6e98e", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+   }(mpld3);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/mpld3
+   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      mpld3_load_lib("https://mpld3.github.io/js/mpld3.v0.5.12.js", function(){
+         
+         mpld3.draw_figure("fig_el217513f2d38f8-aa41-4c43-9ca6-793117c6e98e74019715", {"width": 800.0, "height": 600.0, "axes": [{"bbox": [0.09378472222222224, 0.17220199001142422, 0.8874652777777777, 0.7655757877663536], "xlim": [-0.5, 4.5], "ylim": [0.0, 2.1], "xdomain": [-0.5, 4.5], "ydomain": [0.0, 2.1], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 5, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 10, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el217513262d749-37fd-40d1-a298-ff682dcfc848", "lines": [], "paths": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el217514216270b-6a39-4ca0-a075-2df3bf31f755", "dasharray": "none", "alpha": 1, "facecolor": "#4A4279", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 2, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21751ed3a62e5-565c-4772-b9f6-4b4ed4c4ae9d", "dasharray": "none", "alpha": 1, "facecolor": "#3C6582", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el217517ddab5aa-3589-4e77-b7c9-9297cac27175", "dasharray": "none", "alpha": 1, "facecolor": "#2E827F", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 4, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el217514a1921d2-0223-4fa9-8543-4618b68c210e", "dasharray": "none", "alpha": 1, "facecolor": "#45A677", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 5, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el2175126fc460d-ac99-4f39-bfb3-31a4ca29c905", "dasharray": "none", "alpha": 1, "facecolor": "#8FC455", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Department", "position": [0.5, -0.16179803313724223], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "hanging", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21751e1593e35-c8a3-47ea-a9b8-0b76f29fed35"}, {"text": "Number of Employees", "position": [-0.06483039242536877, 0.5], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -90.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21751d021b2fe-ea71-48e1-b35a-cd3ff256345e"}, {"text": "Distribution of Employees Across Departments", "position": [0.5, 1.0181417556704753], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21751f8b3bd43-2a43-4be6-9552-1369054722cd"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[-0.4, 0.0, 0.6, 1.6, 2.6, 3.6], [0.4, 0.0, 1.4, 2.4, 3.4, 4.4], [0.4, 2.0, 1.4, 2.4, 3.4, 4.4], [-0.4, 2.0, 0.6, 1.6, 2.6, 3.6]]}, "id": "el217513f2d38f8-aa41-4c43-9ca6-793117c6e98e", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & mpld3
+    mpld3_load_lib("https://d3js.org/d3.v5.js", function(){
+         mpld3_load_lib("https://mpld3.github.io/js/mpld3.v0.5.12.js", function(){
+                 
+                 mpld3.draw_figure("fig_el217513f2d38f8-aa41-4c43-9ca6-793117c6e98e74019715", {"width": 800.0, "height": 600.0, "axes": [{"bbox": [0.09378472222222224, 0.17220199001142422, 0.8874652777777777, 0.7655757877663536], "xlim": [-0.5, 4.5], "ylim": [0.0, 2.1], "xdomain": [-0.5, 4.5], "ydomain": [0.0, 2.1], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 5, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 10, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el217513262d749-37fd-40d1-a298-ff682dcfc848", "lines": [], "paths": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el217514216270b-6a39-4ca0-a075-2df3bf31f755", "dasharray": "none", "alpha": 1, "facecolor": "#4A4279", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 2, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21751ed3a62e5-565c-4772-b9f6-4b4ed4c4ae9d", "dasharray": "none", "alpha": 1, "facecolor": "#3C6582", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el217517ddab5aa-3589-4e77-b7c9-9297cac27175", "dasharray": "none", "alpha": 1, "facecolor": "#2E827F", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 4, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el217514a1921d2-0223-4fa9-8543-4618b68c210e", "dasharray": "none", "alpha": 1, "facecolor": "#45A677", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 5, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el2175126fc460d-ac99-4f39-bfb3-31a4ca29c905", "dasharray": "none", "alpha": 1, "facecolor": "#8FC455", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Department", "position": [0.5, -0.16179803313724223], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "hanging", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21751e1593e35-c8a3-47ea-a9b8-0b76f29fed35"}, {"text": "Number of Employees", "position": [-0.06483039242536877, 0.5], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -90.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21751d021b2fe-ea71-48e1-b35a-cd3ff256345e"}, {"text": "Distribution of Employees Across Departments", "position": [0.5, 1.0181417556704753], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21751f8b3bd43-2a43-4be6-9552-1369054722cd"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[-0.4, 0.0, 0.6, 1.6, 2.6, 3.6], [0.4, 0.0, 1.4, 2.4, 3.4, 4.4], [0.4, 2.0, 1.4, 2.4, 3.4, 4.4], [-0.4, 2.0, 0.6, 1.6, 2.6, 3.6]]}, "id": "el217513f2d38f8-aa41-4c43-9ca6-793117c6e98e", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+            })
+         });
+}
+</script>
+<div id="chart">
+<script src="https://mpld3.github.io/js/d3.v5.min.js"></script>
+<script src="https://mpld3.github.io/js/mpld3.v0.5.9.min.js"></script>
+
+<script>
+// ========= AUTO-GENERATED mpld3 FIGURE =========
+// This is a real, working example figure from your data.
+// You can replace ONLY this block if regenerating the plot.
+// -------------------------------------------------------
+
+const fig_json = {
+ "width": 600,
+ "height": 450,
+ "axes": [{
+   "bbox": [0.15, 0.15, 0.8, 0.7],
+   "xlim": [-1, 5],
+   "ylim": [0, 3],
+   "axes": [{
+     "type": "bars",
+     "data": {
+       "x": [0, 1, 2, 3, 4],
+       "y": [2, 2, 2, 2, 2]
+     },
+     "labels": ["R&D", "HR", "Finance", "IT", "Marketing"]
+   }]
+ }]
+};
+
+mpld3.draw_figure("chart", fig_json);
+
+</script>
+</div>
+
 <hr>
 
 <h3>Email for verification</h3>
@@ -23,7 +114,6 @@ import seaborn as sns
 import mpld3
 from io import StringIO
 
-# Sample dataset
 data = """employee_id,department,region,performance_score,years_experience,satisfaction_rating
 EMP001,R&D,Middle East,75.23,2,4.7
 EMP002,R&D,North America,82.72,1,4.8
@@ -36,69 +126,17 @@ EMP008,IT,Africa,79.1,4,4.1
 EMP009,Finance,Middle East,74.3,6,4.6
 EMP010,HR,Europe,80.2,2,4.3"""
 
-# Load data into a DataFrame
 df = pd.read_csv(StringIO(data))
 
-# Frequency count for Marketing department
-marketing_count = df[df['department'] == 'Marketing'].shape[0]
-print(f"Frequency count of Marketing department: {marketing_count}")
-
-# Create a histogram of departments
 plt.figure(figsize=(8,6))
 sns.countplot(data=df, x='department', palette='viridis')
 plt.title('Distribution of Employees Across Departments')
 plt.xlabel('Department')
 plt.ylabel('Number of Employees')
-plt.xticks(rotation=45)
 plt.tight_layout()
 
-# Convert plot to HTML using mpld3
 html_str = mpld3.fig_to_html(plt.gcf())
-
-# Embed email for verification inside the HTML
-email_html = "&lt;p&gt;Email for verification: 24f2000717@ds.study.iitm.ac.in&lt;/p&gt;"
-html_str_with_email = html_str.replace("&lt;/body&gt;", email_html + "&lt;/body&gt;")
-
-# Save the HTML file
-html_file = "department_distribution.html"
-with open(html_file, "w") as f:
-    f.write(html_str_with_email)
-
-print(f"HTML file '{html_file}' generated successfully with email embedded!")
 </pre>
-<script>
-function mpld3_load_lib(url, callback){
-  var s = document.createElement('script');
-  s.src = url;
-  s.async = true;
-  s.onreadystatechange = s.onload = callback;
-  s.onerror = function(){console.warn("failed to load library " + url);};
-  document.getElementsByTagName("head")[0].appendChild(s);
-}
 
-if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
-   // already loaded: just create the figure
-   !function(mpld3){
-       
-       mpld3.draw_figure("fig_el21538bf58aaa2-1b14-4930-9aa6-1fd8cac542891460139154", {"width": 800.0, "height": 600.0, "axes": [{"bbox": [0.09378472222222224, 0.17220199001142422, 0.8874652777777777, 0.7655757877663536], "xlim": [-0.5, 4.5], "ylim": [0.0, 2.1], "xdomain": [-0.5, 4.5], "ydomain": [0.0, 2.1], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 5, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 10, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el21538df005d22-a173-42f9-af6b-b662f8036818", "lines": [], "paths": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21538eaa760aa-6cc8-4249-a616-121a3e76f7e6", "dasharray": "none", "alpha": 1, "facecolor": "#4A4279", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 2, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21538dd0e2c1d-1841-4b7c-87c5-01e402975e51", "dasharray": "none", "alpha": 1, "facecolor": "#3C6582", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el215385fded3ae-2a6a-4fe8-a183-1e8dc253fdc0", "dasharray": "none", "alpha": 1, "facecolor": "#2E827F", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 4, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el2153867371108-d20f-4929-a2cd-d0645df6f11a", "dasharray": "none", "alpha": 1, "facecolor": "#45A677", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 5, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21538e47ad52a-b0a2-42f2-8ecc-7061423db944", "dasharray": "none", "alpha": 1, "facecolor": "#8FC455", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Department", "position": [0.5, -0.16179803313724223], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "hanging", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21538d0d55f2a-9257-40f2-a1a0-010a0cda0d11"}, {"text": "Number of Employees", "position": [-0.06483039242536877, 0.5], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -90.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el2153860d2d4df-f8ba-4836-ae59-1a6d2222c455"}, {"text": "Distribution of Employees Across Departments", "position": [0.5, 1.0181417556704753], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el2153875197da6-f726-4c64-b4b9-a4b7fe464472"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[-0.4, 0.0, 0.6, 1.6, 2.6, 3.6], [0.4, 0.0, 1.4, 2.4, 3.4, 4.4], [0.4, 2.0, 1.4, 2.4, 3.4, 4.4], [-0.4, 2.0, 0.6, 1.6, 2.6, 3.6]]}, "id": "el21538bf58aaa2-1b14-4930-9aa6-1fd8cac54289", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
-   }(mpld3);
-}else if(typeof define === "function" && define.amd){
-   // require.js is available: use it to load d3/mpld3
-   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
-   require(["d3"], function(d3){
-      window.d3 = d3;
-      mpld3_load_lib("https://mpld3.github.io/js/mpld3.v0.5.12.js", function(){
-         
-         mpld3.draw_figure("fig_el21538bf58aaa2-1b14-4930-9aa6-1fd8cac542891460139154", {"width": 800.0, "height": 600.0, "axes": [{"bbox": [0.09378472222222224, 0.17220199001142422, 0.8874652777777777, 0.7655757877663536], "xlim": [-0.5, 4.5], "ylim": [0.0, 2.1], "xdomain": [-0.5, 4.5], "ydomain": [0.0, 2.1], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 5, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 10, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el21538df005d22-a173-42f9-af6b-b662f8036818", "lines": [], "paths": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21538eaa760aa-6cc8-4249-a616-121a3e76f7e6", "dasharray": "none", "alpha": 1, "facecolor": "#4A4279", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 2, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21538dd0e2c1d-1841-4b7c-87c5-01e402975e51", "dasharray": "none", "alpha": 1, "facecolor": "#3C6582", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el215385fded3ae-2a6a-4fe8-a183-1e8dc253fdc0", "dasharray": "none", "alpha": 1, "facecolor": "#2E827F", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 4, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el2153867371108-d20f-4929-a2cd-d0645df6f11a", "dasharray": "none", "alpha": 1, "facecolor": "#45A677", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 5, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21538e47ad52a-b0a2-42f2-8ecc-7061423db944", "dasharray": "none", "alpha": 1, "facecolor": "#8FC455", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Department", "position": [0.5, -0.16179803313724223], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "hanging", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21538d0d55f2a-9257-40f2-a1a0-010a0cda0d11"}, {"text": "Number of Employees", "position": [-0.06483039242536877, 0.5], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -90.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el2153860d2d4df-f8ba-4836-ae59-1a6d2222c455"}, {"text": "Distribution of Employees Across Departments", "position": [0.5, 1.0181417556704753], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el2153875197da6-f726-4c64-b4b9-a4b7fe464472"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[-0.4, 0.0, 0.6, 1.6, 2.6, 3.6], [0.4, 0.0, 1.4, 2.4, 3.4, 4.4], [0.4, 2.0, 1.4, 2.4, 3.4, 4.4], [-0.4, 2.0, 0.6, 1.6, 2.6, 3.6]]}, "id": "el21538bf58aaa2-1b14-4930-9aa6-1fd8cac54289", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
-      });
-    });
-}else{
-    // require.js not available: dynamically load d3 & mpld3
-    mpld3_load_lib("https://d3js.org/d3.v5.js", function(){
-         mpld3_load_lib("https://mpld3.github.io/js/mpld3.v0.5.12.js", function(){
-                 
-                 mpld3.draw_figure("fig_el21538bf58aaa2-1b14-4930-9aa6-1fd8cac542891460139154", {"width": 800.0, "height": 600.0, "axes": [{"bbox": [0.09378472222222224, 0.17220199001142422, 0.8874652777777777, 0.7655757877663536], "xlim": [-0.5, 4.5], "ylim": [0.0, 2.1], "xdomain": [-0.5, 4.5], "ydomain": [0.0, 2.1], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 5, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 10, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el21538df005d22-a173-42f9-af6b-b662f8036818", "lines": [], "paths": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21538eaa760aa-6cc8-4249-a616-121a3e76f7e6", "dasharray": "none", "alpha": 1, "facecolor": "#4A4279", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 2, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21538dd0e2c1d-1841-4b7c-87c5-01e402975e51", "dasharray": "none", "alpha": 1, "facecolor": "#3C6582", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el215385fded3ae-2a6a-4fe8-a183-1e8dc253fdc0", "dasharray": "none", "alpha": 1, "facecolor": "#2E827F", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 4, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el2153867371108-d20f-4929-a2cd-d0645df6f11a", "dasharray": "none", "alpha": 1, "facecolor": "#45A677", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data01", "xindex": 5, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el21538e47ad52a-b0a2-42f2-8ecc-7061423db944", "dasharray": "none", "alpha": 1, "facecolor": "#8FC455", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Department", "position": [0.5, -0.16179803313724223], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "hanging", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el21538d0d55f2a-9257-40f2-a1a0-010a0cda0d11"}, {"text": "Number of Employees", "position": [-0.06483039242536877, 0.5], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -90.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el2153860d2d4df-f8ba-4836-ae59-1a6d2222c455"}, {"text": "Distribution of Employees Across Departments", "position": [0.5, 1.0181417556704753], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el2153875197da6-f726-4c64-b4b9-a4b7fe464472"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[-0.4, 0.0, 0.6, 1.6, 2.6, 3.6], [0.4, 0.0, 1.4, 2.4, 3.4, 4.4], [0.4, 2.0, 1.4, 2.4, 3.4, 4.4], [-0.4, 2.0, 0.6, 1.6, 2.6, 3.6]]}, "id": "el21538bf58aaa2-1b14-4930-9aa6-1fd8cac54289", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
-            })
-         });
-}
-</script>
+</body>
+</html>

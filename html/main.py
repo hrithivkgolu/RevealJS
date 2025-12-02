@@ -104,8 +104,8 @@ injected_html = f"""
 final_html = html_base.replace("</body>", injected_html + "</body>")
 
 # Save file (important!)
-html_file = "department_distribution.html"
+html_file = "department_distributionsd.html"
 with open(html_file, "w") as f:
     f.write(final_html)
 
-print(f"HTML file '{html_file}' created successfully with email + code embedded!")
+print(mpld3.fig_to_html(plt.gcf()))
