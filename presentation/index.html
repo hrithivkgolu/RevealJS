@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/theme/black.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/plugin/highlight/monokai.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai.min.css">
   
   <style>
     .reveal .footer {
@@ -41,6 +41,7 @@
       <p><span>24f2000717@ds.study.iitm.ac.in</span></p>
       <p><small>28 February 2026</small></p>
     </section>
+
     <section>
       <h2>Contact</h2>
       <p>Email: 24f2000717@ds.study.iitm.ac.in</p>
@@ -108,20 +109,29 @@ print(f"Sharpe Ratio: {sharpe:.2f}")
 
   </div>
 
-  <!-- Persistent Footer with Email on EVERY slide -->
+  <!-- Persistent Footer -->
   <div class="footer">
-    Q4 2025 Earnings | Apex Financial Group | 
+    Q4 2025 Earnings | Apex Financial Group |
     <p>Email: 24f2000717@ds.study.iitm.ac.in</p>
   </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/plugin/markdown/markdown.min.js"></script>
+
+<!-- FIX: Real Highlight.js core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+<!-- Reveal.js Highlight plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/plugin/highlight/highlight.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/plugin/math/math.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/plugin/notes/notes.min.js"></script>
 
 <script>
+  // FIX: initialize highlight.js
+  hljs.highlightAll();
+
   Reveal.initialize({
     hash: true,
     controls: true,
