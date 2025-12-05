@@ -54,6 +54,17 @@ style: |
 
 ---
 
+<!-- Slide (explicit background image using data-URI) -->
+<div style="position:relative; width:100%; height:100%;">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'><rect width='100%' height='100%' fill='teal'/><text x='50%' y='50%' font-size='90' text-anchor='middle' fill='white'>Background Image</text></svg>" style="position:absolute; left:0; top:0; width:100%; height:100%; object-fit:cover; z-index:-1; opacity:0.95;" alt="background" />
+</div>
+
+# Slide with explicit background image
+
+- This slide uses an inline `data:` URI image tag positioned behind the content to act as a true slide background (keeps the image inside the same Markdown file).
+
+---
+
 <!-- Slide 3: Quick start / purpose -->
 ## Purpose
 
