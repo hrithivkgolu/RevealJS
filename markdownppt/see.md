@@ -54,14 +54,16 @@ style: |
 
 ---
 
-<!-- Slide (explicit background image using data-URI) -->
-<div style="position:relative; width:100%; height:100%;">
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'><rect width='100%' height='100%' fill='teal'/><text x='50%' y='50%' font-size='90' text-anchor='middle' fill='white'>Background Image</text></svg>" style="position:absolute; left:0; top:0; width:100%; height:100%; object-fit:cover; z-index:-1; opacity:0.95;" alt="background" />
-</div>
+<!--
+<!--
+backgroundImage: url('45FA21E0-CE2C-42C4-8446-FB127D3B061D_1_105_c.jpeg')
+backgroundSize: cover
+backgroundOpacity: 0.95
+-->
 
 # Slide with explicit background image
 
-- This slide uses an inline `data:` URI image tag positioned behind the content to act as a true slide background (keeps the image inside the same Markdown file).
+- This slide uses a Marp slide directive (`backgroundImage`) with a data-URI SVG so the background is defined per-slide and kept in the same Markdown file.
 
 ---
 
