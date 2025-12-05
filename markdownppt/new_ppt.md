@@ -27,9 +27,11 @@ style: |
 
 <!-- Slide with local background image (relative path) -->
 <!--
-backgroundImage: url('45FA21E0-CE2C-42C4-8446-FB127D3B061D_1_105_c.jpeg')
+<!-- Slide with friendly 'welcome' background image (public Unsplash URL) -->
+<!--
+backgroundImage: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80')
 backgroundSize: cover
-backgroundOpacity: 0.7
+backgroundOpacity: 0.65
 class: lead
 -->
 
